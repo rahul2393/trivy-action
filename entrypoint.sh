@@ -100,7 +100,7 @@ fi
 if [ $ignorePolicy ];then
   ARGS="$ARGS --ignore-policy $ignorePolicy"
 fi
-
+ls -al
 echo "Running trivy with options: " --no-progress "${ARGS}" "${artifactRef}"
 echo "Global options: " "${GLOBAL_ARGS}"
 trivy $GLOBAL_ARGS ${scanType} --no-progress $ARGS ${artifactRef}
